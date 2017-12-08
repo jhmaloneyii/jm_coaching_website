@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostsController < UnsecureApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index

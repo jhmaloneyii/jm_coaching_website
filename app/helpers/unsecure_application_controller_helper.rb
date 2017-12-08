@@ -1,0 +1,2 @@
+module UnsecureApplicationControllerHelper
+end

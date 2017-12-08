@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'static_pages#contact'
 
   #blog routes
-  resources :posts
+  resources :posts, path: 'blog'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

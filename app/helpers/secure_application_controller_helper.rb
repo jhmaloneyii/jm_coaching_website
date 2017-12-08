@@ -1,0 +1,2 @@
+module SecureApplicationControllerHelper
+end

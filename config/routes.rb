@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   #static pages
-  get 'contact', to: 'static_pages#contact'
+  get 'character', to: 'static_pages#character'
+  get 'about', to: 'static_pages#about'
+  get 'store', to: 'static_pages#store'
 
   #blog routes
   resources :posts, path: 'blog'

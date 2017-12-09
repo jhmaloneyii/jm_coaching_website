@@ -2,6 +2,12 @@ class StaticPagesController < UnsecureApplicationController
   def home
   end
 
-  def contact
+  def character
+  end
+
+  def about
+  end
+
+  def store
   end
 end

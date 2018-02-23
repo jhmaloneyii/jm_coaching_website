@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  devise_for :admins
+  root to: 'static_pages#home'
 
   #static pages
   get 'character', to: 'static_pages#character'

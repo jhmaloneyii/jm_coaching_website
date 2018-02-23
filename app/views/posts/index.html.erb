@@ -1,6 +1,13 @@
 <% provide(:title, "Blog") %>
+<% if admin_signed_in? %>
+  <%= link_to "Create New Post", new_post_path %>
+<% end %>
+
 <% @posts.each do |post| %>
   <h1><%= link_to "#{post.title}", post %></h1>
-  <p><%= post.content %></p>
+  <p><%= post.content.slice(0..50) + "..." %></p>
+  <% if admin_signed_in? %>
+    <%= link_to "Edit", edit_post_path(post.id) %>
+    <%= link_to "Delete", post_path(post.id), method: :delete, data: {confirm: "Are you sure you want to delete?"} %>
+  <% end %>
 <%end%>
-

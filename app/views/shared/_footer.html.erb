@@ -1,0 +1,12 @@
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; JM Coaching Services LLC 2018</p>
+        <% if admin_signed_in? %>
+            <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link"%>
+        <% else %>
+            <%= link_to "Sign In", new_session_path(:admin), class: "nav-link"%>
+        <% end %>
+      </div>
+    </footer>
+    

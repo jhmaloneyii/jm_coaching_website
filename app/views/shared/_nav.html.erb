@@ -1,0 +1,42 @@
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse">
+      <%= link_to "JM Coaching Services", root_path, class: "navbar-brand" %>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "Athletes", character_path, class: "nav-link" %>
+        </li>
+        <li>
+          <p>|</p>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Coach", about_path, class: "nav-link" %>
+        </li>
+        <li>
+          <p>|</p>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Plans", store_path, class: "nav-link" %>
+        </li >
+        <li>
+          <p>|</p>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Blog", posts_path, class: "nav-link"%>
+        </li>
+
+        <% if admin_signed_in? %>
+          <li>
+            <p>|</p>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link"%>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

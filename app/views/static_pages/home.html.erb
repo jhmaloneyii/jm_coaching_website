@@ -8,8 +8,8 @@
               <h1 class="brand-heading">JM Coaching <br> Services</h1>
               <p class="intro-text">Performance and skills training for endurance cyclists.
                 <br>Plan - Work - Succeed</p>
-              <a href="#" class="btn btn-outline">Get Started</a>
-              <a href="#character" class="btn btn-outline js-scroll-trigger">Learn More</a>                
+              <%= link_to "Get Started", store_path, class: "btn btn-outline-primary" %>
+              <%= link_to "Learn More", "#character", class: "btn btn-outline-primary" %>               
               </a>
             </div>
           </div>
@@ -18,67 +18,92 @@
     </header>
 
     <!-- Character Section -->
-    <section id="character" class="content-section text-center">
+    <section id="character" class="focus-section text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h2>You want to become a better cyclist</h2>
-            <p>A better cyclist is more skilled, focused, and organized. To improve it takes careful planning, dedication, execution, and closed loop training. We can all go faster, farther, and have more fun.</p>
+            <p>A better cyclist is more skilled, focused, and organized. We can all go faster, farther, and have more fun no matter where we are or where we want to go.</p>
+            <div>
+              <%= image_tag 'carter_downhill.jpg', size: "150", class: 'photo-circle'%>
+              <%= image_tag 'nate_and_katy.jpg', size: "150", class: 'photo-circle'%>
+              <%= image_tag 'ethan_roots.jpg', size: "150", class: 'photo-circle'%>
+            </div>
             <h3>But where do you begin?</h3>
-            <p>Getting started can be the hardest part. How do we plan? What goals are reasonable? How do we know we’re improving? There can be a lot of uncertainty when it comes to training. Don’t let it slow you down or overwhelm you. Have a clear direction and  confidence in your training program. Save money and time by using intelligent and proven training techniques.</p>
-            <a href="#guide" class="btn btn-outline js-scroll-trigger">This is JM Coaching</a>
+            <p>Getting started can be the hardest part. How do we plan? What goals are reasonable? How do we know we’re improving? There can be a lot of uncertainty when it comes to training. Don’t let it slow you down or overwhelm you. Have a clear direction and confidence in your training program. Save money and time by using intelligent and proven training techniques.</p>
+            <%= link_to "Meet the Athletes", character_path, class: "btn btn-outline-primary" %>
+            <%= link_to "Meet the Coach", about_path, class: "btn btn-outline-primary" %>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Guide Section -->
-    <section id="guide" class="photo-section content-section text-center guide-photo">
-      <div class="container">
-        <div class="col-lg-6 mx-auto">
-          <h2>Every athlete needs a coach.</h2>
-          <p>JM coaching understands the confusion and uncertainty that comes with training. Cycling is a beautiful sport filled with challenge and adversity and the path forward isn’t always clear.</p>
-          <h2>JM Coaching is your guide.</h2>
-          <p>The best training plans are a combination of knowledge, experience, and understanding. Coach Joe is USA Cycling Certified, a Spinning instructor, and has year of experience both as a coach and a professional cyclist. The result is Joe has helped cyclists of all backgrounds gain clarity, stay motivated, and reach their goals.</p>
-        </div>
-        <div class="col-lg-6">
-        </div>
-      </div>
-    </section>
-
-    <!-- Plan Section -->
-    <section id="plan" class="content-section text-center">
+    <section id="guide" class="focus-section text-center">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Contact Start Bootstrap</h2>
-            <p>Feel free to leave us a comment on the
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a>
-              on Start Bootstrap to give some feedback about this theme!</p>
-            <ul class="list-inline banner-social-buttons">
-              <li class="list-inline-item">
-                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
-                  <i class="fa fa-twitter fa-fw"></i>
-                  <span class="network-name">Twitter</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
-                  <i class="fa fa-github fa-fw"></i>
-                  <span class="network-name">Github</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
-                  <i class="fa fa-google-plus fa-fw"></i>
-                  <span class="network-name">Google+</span>
-                </a>
-              </li>
-            </ul>
+         <div class="col-lg-8 mx-auto">
+           <%= image_tag "finn_fade_right.jpg", class: "photo" %>
+         </div>
+          <div class="col-lg-4 mx-auto">
+            <table style="height: 400px;">
+              <tr>
+                <td class="align-middle">
+                  <h2>Every athlete needs a coach.</h2>
+                  <p>JM coaching understands the confusion and uncertainty that comes with training. Cycling is a beautiful sport filled with challenge and adversity and the path forward isn’t always clear. That's why JM Coaching focuses on providing the clearity and tools to overcome these cahllenges.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 mx-auto">
+            <table style="height: 400px;">
+              <tr>
+                <td class="align-middle">
+                  <h2>JM Coaching is your guide.</h2>
+                  <p>The best training plans are a combination of knowledge, experience, and understanding. Coach Joe is USA Cycling Certified, a Spinning instructor, and has year of experience both as a coach and a professional cyclist. The result is Joe has helped cyclists of all backgrounds gain clarity, stay motivated, and reach their goals.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-lg-8 mx-auto" >
+            <%= image_tag "carter_berm_fade_left.JPG", class: "photo" %>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Map Section -->
-    <div id="map"></div>
+    <!-- Plan Section -->
+    <section id="plan" class="focus-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1>The JM Coaching Method is so simple <br> it's fucking stupid</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mx-auto">
+            <h3>Plan</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim dictum gravida. Mauris nec nunc consequat, luctus ante vitae, porta tellus. Class aptent taciti sociosqu.</p>
+            <%= link_to image_tag('cal_icon.png', size: "100"), "#" %>
+          </div>
+          <div class="col-lg-4 mx-auto">
+            <h3>Work</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim dictum gravida. Mauris nec nunc consequat, luctus ante vitae, porta tellus. Class aptent taciti sociosqu.</p>
+            <%= link_to image_tag('bike.png', size: "100"), "#" %>
+          </div>
+          <div class="col-lg-4 mx-auto">
+            <h3>Succeed</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim dictum gravida. Mauris nec nunc consequat, luctus ante vitae, porta tellus. Class aptent taciti sociosqu.</p>
+            <%= link_to image_tag('award_icon.png', size: "100"), "#" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <%= link_to "Get Started", store_path, class: "btn btn-outline-primary" %>
+          </div>
+        </div>
+      </div>
+    </section>

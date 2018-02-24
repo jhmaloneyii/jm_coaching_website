@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  #devise_for :admins
   root to: 'static_pages#home'
 
   #static pages
-  get 'character', to: 'static_pages#character'
-  get 'about', to: 'static_pages#about'
-  get 'store', to: 'static_pages#store'
+  #get 'character', to: 'static_pages#character'
+  #get 'about', to: 'static_pages#about'
+  #get 'store', to: 'static_pages#store'
 
   #blog routes
-  resources :posts, path: 'blog'
+  #resources :posts, path: 'blog'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

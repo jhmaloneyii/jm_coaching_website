@@ -8,6 +8,7 @@
             <% @post.blog_tags.each do |tag| %>
               <p> <%= tag.tag_name %></p>
             <% end %>
+            <%= image_tag @post.image_url.to_s %>
             <p><%= @post.content %></p>
           </div>
         </div>

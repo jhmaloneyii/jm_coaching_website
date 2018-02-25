@@ -1,12 +1,14 @@
-<%= form_for @post do |f| %>
+<%= form_for @post, html: { multipart: true } do |f| %>
 
   <%= render 'shared/error_messages' %>
     <%= f.label :title %><br>
     <%= f.text_field :title, placeholder: "Post Title Here" %><br>
     <%= f.label :content %><br>
-    <%= f.text_area :content, placeholder: "Write Post Here", size: '60x12' %>
+    <%= f.text_area :content, placeholder: "Write Post Here", size: '60x12' %><br>
     <%= f.label :blog_tag_ids, "Tags" %><br>
-    <%= f.collection_select :blog_tag_ids, BlogTag.order(:tag_name), :id, :tag_name, {}, {multiple: true} %>
+    <%= f.collection_select :blog_tag_ids, BlogTag.order(:tag_name), :id, :tag_name, {}, {multiple: true} %><br>
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
     <br>
     <br>
     <%= f.submit 'Post' %>

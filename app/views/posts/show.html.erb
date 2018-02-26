@@ -5,6 +5,7 @@
           <div class="col-lg-10 mx-auto">
             <h1><%= @post.title %> </h1>
             <br>
+            <p>Blog Tags:</p>
             <% @post.blog_tags.each do |tag| %>
               <p> <%= tag.tag_name %></p>
             <% end %>

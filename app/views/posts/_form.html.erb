@@ -7,7 +7,7 @@
                 <%= f.label :title %><br>
                 <%= f.text_field :title, placeholder: "Post Title Here" %><br>
                 <%= f.label :content %><br>
-                <%= f.text_area :content, placeholder: "Write Post Here", size: '60x12' %><br>
+                <%= f.text_area :content, placeholder: "Write Post Here", size: '100x25', class: "post-editor" %><br>
                 <%= f.label :tag_ids, "Tags" %><br>
                 <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true} %><br>
                 <%= f.label :image %><br>
@@ -20,3 +20,13 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.post-editor').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  })
+</script>

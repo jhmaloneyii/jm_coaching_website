@@ -31,6 +31,8 @@ gem 'carrierwave'
 
 gem 'chosen-rails'
 
+gem 'bootstrap-wysihtml5-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

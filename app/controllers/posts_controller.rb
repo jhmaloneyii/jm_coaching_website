@@ -36,7 +36,7 @@ class PostsController < UnsecureApplicationController
 
   def destroy
     @post.destroy
-    redirect_to 'index', notice: "Post was Deleted!"
+    redirect_to posts_path, notice: "Post was Deleted!"
   end
 
   private

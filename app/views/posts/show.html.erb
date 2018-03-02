@@ -6,8 +6,8 @@
             <h1><%= @post.title %> </h1>
             <br>
             <p>Blog Tags:</p>
-            <% @post.blog_tags.each do |tag| %>
-              <p> <%= tag.tag_name %></p>
+            <% @post.tags.each do |tag| %>
+              <p> <%= tag.name %></p>
             <% end %>
             <%= image_tag @post.image_url.to_s %>
             <p><%= @post.content %></p>

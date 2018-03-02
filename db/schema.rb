@@ -31,26 +31,26 @@ ActiveRecord::Schema.define(version: 20180225002722) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
-  create_table "blog_tags", force: :cascade do |t|
-    t.string   "tag_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "blog_tags_posts", id: false, force: :cascade do |t|
-    t.integer "post_id"
-    t.integer "blog_tag_id"
-  end
-
-  add_index "blog_tags_posts", ["blog_tag_id"], name: "index_blog_tags_posts_on_blog_tag_id"
-  add_index "blog_tags_posts", ["post_id"], name: "index_blog_tags_posts_on_post_id"
-
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+  end
+
+  create_table "posts_tags", id: false, force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+  end
+
+  add_index "posts_tags", ["post_id"], name: "index_posts_tags_on_post_id"
+  add_index "posts_tags", ["tag_id"], name: "index_posts_tags_on_tag_id"
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

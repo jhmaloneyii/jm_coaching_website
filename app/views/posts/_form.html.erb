@@ -1,16 +1,22 @@
-<%= form_for @post, html: { multipart: true } do |f| %>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx -auto">
+            <%= form_for @post, html: { multipart: true } do |f| %>
 
-  <%= render 'shared/error_messages' %>
-    <%= f.label :title %><br>
-    <%= f.text_field :title, placeholder: "Post Title Here" %><br>
-    <%= f.label :content %><br>
-    <%= f.text_area :content, placeholder: "Write Post Here", size: '60x12' %><br>
-    <%= f.label :tag_ids, "Tags" %><br>
-    <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true} %><br>
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-    <br>
-    <br>
-    <%= f.submit 'Post' %>
+              <%= render 'shared/error_messages' %>
+                <%= f.label :title %><br>
+                <%= f.text_field :title, placeholder: "Post Title Here" %><br>
+                <%= f.label :content %><br>
+                <%= f.text_area :content, placeholder: "Write Post Here", size: '60x12' %><br>
+                <%= f.label :tag_ids, "Tags" %><br>
+                <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true} %><br>
+                <%= f.label :image %><br>
+                <%= f.file_field :image %>
+                <br>
+                <br>
+                <%= f.submit 'Post' %>
 
-<% end %>
+            <% end %>
+        </div>
+    </div>
+</div>

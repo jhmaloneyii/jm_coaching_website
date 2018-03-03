@@ -8,7 +8,7 @@
             <%= image_tag @post.image_url.to_s, class: "img-fluid"%><br>
             <p>Blog Tags:</p>
             <% @post.tags.each do |tag| %>
-              <p> <%= tag.name %></p>
+              <%= tag.name %>
             <% end %><br>
             <%= sanitize @post.content %>
           </div>

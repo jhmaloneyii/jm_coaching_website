@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   #blog routes
   resources :posts, path: 'blog'
+  get 'blog_index', to: 'posts#blog_index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,6 +1,6 @@
 class PostsController < UnsecureApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy, :blog_index]
 
   def index
     @posts = Post.all
@@ -39,10 +39,14 @@ class PostsController < UnsecureApplicationController
     redirect_to posts_path, notice: "Post was Deleted!"
   end
 
+  def blog_index
+    @posts = Post.all
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :image, :active, tag_ids:[])
+    params.require(:post).permit(:title, :content, :image, :active, :summary, tag_ids:[])
   end
 
   def find_post

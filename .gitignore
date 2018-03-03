@@ -23,4 +23,4 @@
 .ebextensions/*
 
 # Ignore developments uploads
-.public/uploads/*
+/public/uploads/*

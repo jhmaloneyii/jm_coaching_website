@@ -6,6 +6,8 @@
               <%= render 'shared/error_messages' %>
                 <%= f.label :title %><br>
                 <%= f.text_field :title, placeholder: "Post Title Here" %><br>
+                <%= f.label :summary %><br>
+                <%= f.text_area :summary, placeholder: "Keep this short, maximum 140 characters.", size: '50x10' %><br>
                 <%= f.label :content %><br>
                 <%= f.text_area :content, placeholder: "Write Post Here", size: '100x25', class: "post-editor" %><br>
                 <%= f.label :tag_ids, "Tags" %><br>

@@ -2,28 +2,17 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-10 mx-auto">
-      <% if admin_signed_in? %>
-        <%= link_to "Create New Post", new_post_path %>
-      <% end %>
-
-      <table class="table">
-        <tr>
-          <th>Title</th>
-          <th></th>
-          <th>Active?</th>
-        </th>
-        <% @posts.each do |post| %>
-          <tr>
-            <td><h3><%= link_to "#{post.title}", post %></h3></td>
-            <td><p><%= sanitize(post.content).slice(0..50) + "..." %></p></td>
-            <td><p><%= post.active ? "x" %></p></td>
-            <% if admin_signed_in? %>
-              <td><%= link_to "Edit", edit_post_path(post.id) %></td>
-              <td><%= link_to "Delete", post_path(post.id), method: :delete, data: {confirm: "Are you sure you want to delete?"} %></td>
-            <% end %>
-          </tr>
-        <%end%>
-      </table>
+      <% @posts.each do |post| %>
+        <div class="row">
+          <div class="col-lg-4 mx-auto">
+            <%= image_tag post.image.to_s, class: "img-fluid" %>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <h1><%= link_to post.title, post %></h1>
+            <p><%= post.summary %></p>
+          </div>
+        </div>
+      <% end%>
     </div>
   </div>
 </div>

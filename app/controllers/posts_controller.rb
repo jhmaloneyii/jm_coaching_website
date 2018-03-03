@@ -42,7 +42,7 @@ class PostsController < UnsecureApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :image, tag_ids:[])
+    params.require(:post).permit(:title, :content, :image, :active, tag_ids:[])
   end
 
   def find_post

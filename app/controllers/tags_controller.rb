@@ -3,6 +3,7 @@ class TagsController < UnsecureApplicationController
   before_action :find_tag, only: [:show, :edit, :update, :destroy]
 
   def show
+    @posts = @tag.posts
   end
 
   def index

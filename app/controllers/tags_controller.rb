@@ -1,5 +1,5 @@
 class TagsController < UnsecureApplicationController
-  before_action :authenticate_admin!
+  before_action :authenticate_admin!, except: [:show]
   before_action :find_tag, only: [:show, :edit, :update, :destroy]
 
   def show

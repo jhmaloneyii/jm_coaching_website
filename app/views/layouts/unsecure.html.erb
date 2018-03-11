@@ -5,15 +5,20 @@
 <%= render 'shared/head' %>
 
 </head>
-<body id="page-top">
-  
-  <%= render 'shared/nav' %>  
+<body>
 
-  <%= render 'shared/secure/admin_sidebar' if admin_signed_in? %>
+  <%= render 'shared/nav' %>
 
-  <%= yield %>
+  <div class="wrapper">
 
-  <%= render 'shared/footer' %>
+    <%= render 'shared/secure/admin_sidebar' if admin_signed_in? %>
+
+    <div class="container-fluid" id="yield-content">
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </div>
+
+  </div>
 
 </body>
 </html>

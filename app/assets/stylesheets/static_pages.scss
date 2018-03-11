@@ -28,7 +28,7 @@
     }
     .intro-text {
       font-size: 18px;
-      color: #474b4f;
+      color: $jm-grey;
     }
 
     .btn-outline-primary {
@@ -44,8 +44,7 @@
     }
   }
   @media(min-width:768px) {
-    height: 100%;
-    padding: 0;
+    padding: 200;
     .intro-body {
       .brand-heading {
         font-size: 100px;

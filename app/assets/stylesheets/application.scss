@@ -60,3 +60,28 @@ p {
 a {
   font-size: 15px;
 }
+
+.wrapper {
+  display: flex;
+}
+
+#yield-content {
+  display: block;
+  padding: 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}

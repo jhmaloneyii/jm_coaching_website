@@ -10,4 +10,7 @@ class StaticPagesController < UnsecureApplicationController
 
   def store
   end
+
+  def test
+  end
 end

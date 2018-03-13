@@ -1,8 +1,8 @@
-<% if @post.errors.any? %>
-     <div>
-        <p><%= pluralize(@post.errors.count, "error") %> prevented this post from saving.</p>
+<% if item.errors.any? %>
+     <div class="text-danger">
+        <p><%= pluralize(item.errors.count, "error") %> prevented this post from saving.</p>
           <ul>
-            <% @post.errors.full_messages.each do |msg| %>
+            <% item.errors.full_messages.each do |msg| %>
               <li><%= msg %></li>
             <% end %>
           </ul> 

@@ -3,7 +3,7 @@
         <div class="col-lg-10 mx -auto">
             <%= form_for @post, html: { multipart: true } do |f| %>
 
-              <%= render 'shared/error_messages' %>
+              <%= render 'shared/error_messages', item: @post %>
                 <%= f.label :title %><br>
                 <%= f.text_field :title, placeholder: "Post Title Here" %><br>
                 <%= f.label :summary %><br>

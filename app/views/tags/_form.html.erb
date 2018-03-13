@@ -1,5 +1,6 @@
 <%= form_for @tag do |f| %>
 
+  <%= render 'shared/error_messages', item: @tag%>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br>

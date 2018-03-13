@@ -11,6 +11,7 @@ class PostsController < UnsecureApplicationController
 
   def new
     @post = Post.new
+    @summary_max = Post.validators_on( :summary ).first.options[:maximum]
   end
 
   def create
@@ -24,6 +25,7 @@ class PostsController < UnsecureApplicationController
   end
 
   def edit
+    @summary_max = Post.validators_on( :summary ).first.options[:maximum]
   end
 
   def update

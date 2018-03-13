@@ -13,7 +13,7 @@
   text-align: center;
 
   color: black;
-  background: image_url('Olympic_womens_header.jpg') no-repeat bottom center scroll;
+  background: image_url('header_with_bolt.png') no-repeat bottom center scroll;
   background-color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -94,13 +94,4 @@
 .table {
   display: table;
   width: 100%;
-}
-
-#agreement {
-  background: image_url('PMC_screenshot.jpg') no-repeat bottom center scroll;
-  background-color: white;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }

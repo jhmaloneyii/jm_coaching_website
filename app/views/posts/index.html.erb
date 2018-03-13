@@ -2,23 +2,14 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12 mx-auto">
-      <% @posts.each do |post| %>
-      <% if post.active %>
-        <div class="row">
-          <div class="col-lg-4 mx-auto">
-            <%= link_to (image_tag post.image.to_s, class: "img-fluid"), post %>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <h1><%= link_to post.title, post %></h1>
-            <p><%= post.summary %></p>
-            <p>Tags: </p>
-            <% post.tags.each do |tag| %>
-              <%= link_to "#{tag.name}", tag %>
-            <% end %>
-          </div>
-        </div>
+      <h1>JM Coaching Blog</h1>
+      <table class="table">
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= render 'shared/unsecure/post_preview', post: post %></td>
+          </tr>
         <% end %>
-      <% end%>
+      </table>
     </div>
   </div>
 </div>

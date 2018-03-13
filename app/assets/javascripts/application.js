@@ -12,8 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require chosen-jquery
-//= require bootstrap-wysihtml5
-//= require bootstrap-wysihtml5/locales
+//= require turbolinks
+//= require tinymce
 //= require_tree .

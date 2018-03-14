@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get 'character', to: 'static_pages#character'
   get 'about', to: 'static_pages#about'
   get 'store', to: 'static_pages#store'
-  get 'test', to: 'static_pages#test'
 
   #blog routes
   resources :posts, path: 'blog'

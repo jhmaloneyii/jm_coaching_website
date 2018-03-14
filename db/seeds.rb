@@ -14,9 +14,10 @@ when "development"
   Tag.create(name: "cool stuff")
   Tag.create(name: "lame stuff")
 
-  Admin.create(email: 'jmcoachingllc@gmail.com', password: 'asdfasdf', password_confirmation: 'asdfasdf')
+  Admin.create(email: Rails.application.secrets.joe_admin_email, password: Rails.application.secrets.joe_admin_password)
 
 when "production"
+  Admin.create(email: Rails.application.secrets.joe_admin_email, password: Rails.application.secrets.joe_admin_password)
 
 when "test"
 

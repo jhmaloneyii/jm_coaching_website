@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   #get 'store', to: 'static_pages#store'
 
   #blog routes
-  #resources :posts, path: 'blog'
+  resources :posts, path: 'blog'
+  get 'blog_index', to: 'posts#blog_index'
+
+  resources :tags
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

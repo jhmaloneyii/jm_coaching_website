@@ -1,23 +1,26 @@
 <% provide(:title, @post.title) %>
-<section id="about" class="content-section">
+<section class="content-section">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1><%= @post.title %> </h1>
             <br>
-            <% @post.blog_tags.each do |tag| %>
-              <p> <%= tag.tag_name %></p>
-            <% end %>
-            <p><%= @post.content %></p>
+            <%= image_tag @post.image_url.to_s, class: "img-fluid"%><br>
+            <p>Blog Tags: <% @post.tags.each do |tag| %>
+              <%= link_to "#{tag.name}", tag %>
+            <% end %><br></p>
+            <%= sanitize @post.content %>
           </div>
         </div>
 
         <div class= "row">
           <div class= "col-lg-6 mx-auto">
-            <p><%= link_to "Back", posts_path %></p>
-            <% if admin_signed_in? %>
-            <p><%= link_to "Edit", edit_post_path(@post.id) %></p>
-            <p><%= link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure you want to delete?"} %></p>
-            <% end %>
+            <p><%= link_to "Back", posts_path %>
+              <% if admin_signed_in? %>
+                | <%= link_to "Edit", edit_post_path(@post.id) %> |
+                <%= link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure you want to delete?"} %>
+              <% end %>
+            </p>
+          </div>
       </div>
 </section>

@@ -1,0 +1,12 @@
+default:
+  branding: false
+  plugins:
+    - image
+    - link
+
+alternate:
+  selector: textarea.table-editor
+  toolbar: styleselect | bold italic | undo redo | table
+  branding: false
+  plugins:
+    - table

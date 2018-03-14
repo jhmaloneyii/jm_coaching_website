@@ -5,10 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Post.create(title: 'Test 1', content: 'This is a sample blog post content.')
-Post.create(title: 'Test 2', content: 'this is also a sample blog post content.')
 
-BlogTag.create(tag_name: "cool stuff")
-BlogTag.create(tag_name: "lame stuff")
+case Rails.env
+when "development"
+  Post.create(title: 'Test 1', content: 'This is a sample blog post content.')
+  Post.create(title: 'Test 2', content: 'this is also a sample blog post content.')
 
-Admin.create(email: 'jmcoachingllc@gmail.com', password: 'asdfasdf', password_confirmation: 'asdfasdf')
+  Tag.create(name: "cool stuff")
+  Tag.create(name: "lame stuff")
+
+  Admin.create(email: Rails.application.secrets.joe_admin_email, password: Rails.application.secrets.joe_admin_password)
+
+when "production"
+  Admin.create(email: Rails.application.secrets.joe_admin_email, password: Rails.application.secrets.joe_admin_password)
+
+when "test"
+
+end

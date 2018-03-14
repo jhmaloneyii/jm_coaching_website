@@ -21,3 +21,6 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 .ebextensions/*
+
+# Ignore developments uploads
+/public/uploads/*

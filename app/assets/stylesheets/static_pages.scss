@@ -13,7 +13,7 @@
   text-align: center;
 
   color: black;
-  background: image_url('Olympic_womens_header.jpg') no-repeat bottom center scroll;
+  background: image_url('header_with_bolt.png') no-repeat bottom center scroll;
   background-color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -28,7 +28,7 @@
     }
     .intro-text {
       font-size: 18px;
-      color: #474b4f;
+      color: $jm-grey;
     }
 
     .btn-outline-primary {
@@ -47,8 +47,7 @@
     }
   }
   @media(min-width:768px) {
-    height: 100%;
-    padding: 0;
+    padding: 200;
     .intro-body {
       .brand-heading {
         font-size: 100px;
@@ -98,13 +97,4 @@
 .table {
   display: table;
   width: 100%;
-}
-
-#agreement {
-  background: image_url('PMC_screenshot.jpg') no-repeat bottom center scroll;
-  background-color: white;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
